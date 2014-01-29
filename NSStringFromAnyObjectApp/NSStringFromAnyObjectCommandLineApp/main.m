@@ -1,107 +1,99 @@
-//
-//  main.m
-//  NSStringFromAnyObjectCommandLineApp
-//
-//  Created by Stanislaw Pankevich on 29/01/14.
-//  Copyright (c) 2014 Stanislaw Pankevich. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "UIKit.h"
 
 #import "NSStringFromAnyObject.h"
 
-#import "UIKit.h"
-#import "CoreLocation.h"
-
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
         NSString *anyObjectInspection;
 
+        // Objective-C
+
         anyObjectInspection = NSStringFromAnyObject( nil );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( @[ @(1) ] );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( @(1) );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( [@(1) class] );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( @selector(main) );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
+
+        // Foundation
 
         anyObjectInspection = NSStringFromAnyObject( NSMakeRange(0, 10) );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
+        // C pointers
 
         anyObjectInspection = NSStringFromAnyObject( NULL );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         void *ptr = &printf;
         anyObjectInspection = NSStringFromAnyObject( ptr );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         const void *const_ptr = &printf;
         anyObjectInspection = NSStringFromAnyObject( const_ptr );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
+        // C numbers
 
         anyObjectInspection = NSStringFromAnyObject( (BOOL)YES );
-        NSLog(@"BOOL: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( 1.24 );
-        NSLog(@"double: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( 1.24f );
-        NSLog(@"float: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( 1 );
-        NSLog(@"int: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( (short)1 );
-        NSLog(@"short: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( (long)1000L );
-        NSLog(@"long: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( (long long)100000000000LL );
-        NSLog(@"long long: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( (char)'c' );
-        NSLog(@"signed char: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( (unsigned char)'c' );
-        NSLog(@"unsigned char: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
+        // C strings
 
         char *str = "A string";
         const char *conststr = (const char *)str;
 
         anyObjectInspection = NSStringFromAnyObject( str );
-        NSLog(@"char *: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
         
         anyObjectInspection = NSStringFromAnyObject( conststr );
-        NSLog(@"const char *: %@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
         
-
         // UIKit
 
         anyObjectInspection = NSStringFromAnyObject( CGRectMake(0, 0, 200, 200) );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( CGPointMake(0, 0) );
-        NSLog(@"%@", anyObjectInspection);
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
 
         anyObjectInspection = NSStringFromAnyObject( CGSizeMake(0, 0) );
-        NSLog(@"%@", anyObjectInspection);
-
-        // CoreLocation
+        printf("%s\n", [anyObjectInspection cStringUsingEncoding:NSUTF8StringEncoding]);
     }
 
     return 0;
 }
-
