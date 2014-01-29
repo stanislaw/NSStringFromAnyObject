@@ -1,7 +1,18 @@
 //
 // NSStringFromAnyObject.h
 //
-// NSStringFromAnyObject is inspired by ATLog project written by Yan Rabovik: https://github.com/rabovik/ATLog
+// NSStringFromAnyObject creation is caused by development needs of EchoLogger project written by Stanislaw Pankevich:
+//
+// https://github.com/stanislaw/EchoLogger
+//
+// which used to provide analogous functionality: debug strings for arbitrary objects be it an Objective-C or C objects -
+// by means of CLANG's __attribute__((overloadable)).
+//
+// NSStringFromAnyObject uses Objective-C Runtime introspection instead, which seems to be a more consistent approach:
+// it is inspired by ATLog project written by Yan Rabovik:
+//
+// https://github.com/rabovik/ATLog
+//
 // More specifically it borrows the trick which allows passing Objective-C objects as void * arguments:
 //
 // ```
