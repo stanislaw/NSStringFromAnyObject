@@ -1,14 +1,14 @@
 //
 // NSStringFromAnyObject.h
 //
-// NSStringFromAnyObject is inspired by ATLog project written Yan Rabovik: https://github.com/rabovik/ATLog
-// More specifically it borrows the trick which allows passing Objective-C objects to a void * argument:
+// NSStringFromAnyObject is inspired by ATLog project written by Yan Rabovik: https://github.com/rabovik/ATLog
+// More specifically it borrows the trick which allows passing Objective-C objects as void * arguments:
 //
 // ```
 // @encode(__typeof__(anyobject)), (__typeof__(anyobject) []){ anyobject }
 // ```
 //
-// Created by Stanislaw Pankevich on 9/7/13.
+// Created by Stanislaw Pankevich on 29/01/14.
 // Copyright (c) 2014 Stanislaw Pankevich. All rights reserved.
 // Copyright (C) 2013 Yan Rabovik
 
