@@ -17,7 +17,7 @@ void __NSStringFromAnyObjectAdd(NSStringFromAnyObjectHandler function) {
         }
     }
 
-    assert("Reached the limit of maximum handlers");
+    assert("__NSStringFromAnyObjectAdd: limit of handlers is reached");
 }
 
 
@@ -156,7 +156,7 @@ NSString *__NSStringFromAnyObject(const char *type, const void *object) {
 
     // Additional handlers
     for (int i = 0; i < NSStringFromAnyObjectHandlersMax; i++) {
-        NSStringFromAnyObjectHandler handler = NSStringFromAnyObjectHandlers[0];
+        NSStringFromAnyObjectHandler handler = NSStringFromAnyObjectHandlers[i];
 
         if (handler != NULL) {
             NSString *string = handler(type, object);
