@@ -69,6 +69,9 @@
 		86891E3018998046004A4558 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86891E3318998046004A4558 /* NSStringFromAnyObjectCommandLineApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStringFromAnyObjectCommandLineApp-Prefix.pch"; sourceTree = "<group>"; };
 		86891E3418998046004A4558 /* NSStringFromAnyObjectCommandLineApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NSStringFromAnyObjectCommandLineApp.1; sourceTree = "<group>"; };
+		86891E491899A283004A4558 /* MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapKit.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/MapKit.h; sourceTree = "<group>"; };
+		86891E4A1899A2F9004A4558 /* UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIKit.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/UIKit.h; sourceTree = "<group>"; };
+		86891E4B1899A331004A4558 /* CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocation.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/CoreLocation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				86891E2818997FE4004A4558 /* NSStringFromAnyObject.h */,
+				86891E491899A283004A4558 /* MapKit.h */,
+				86891E4A1899A2F9004A4558 /* UIKit.h */,
+				86891E4B1899A331004A4558 /* CoreLocation.h */,
 			);
 			name = NSStringFromAnyObject;
 			path = ../NSStringFromAnyObject;
@@ -557,6 +563,7 @@
 				86891E2318997FD5004A4558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86891E2418997FD5004A4558 /* Build configuration list for PBXNativeTarget "NSStringFromAnyObjectAppTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +572,7 @@
 				86891E2618997FD5004A4558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86891E3618998046004A4558 /* Build configuration list for PBXNativeTarget "NSStringFromAnyObjectCommandLineApp" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +581,7 @@
 				86891E3818998046004A4558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
