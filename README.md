@@ -1,5 +1,13 @@
 # NSStringFromAnyObject
 
+NSStringFromAnyObject creation is caused by evolution of [EchoLogger project](https://github.com/stanislaw/EchoLogger) which used to provide the same functionality: `NSString representations for arbitrary objects (be it Objective-C or C objects)` by means of `Clang`'s `__attribute__((overloadable))`.  
+
+NSStringFromAnyObject uses Objective-C Runtime introspection instead, as it appears to be a more consistent approach (though probably a bit slower). It is inspired by [ATLog project](https://github.com/rabovik/ATLog) written by Yan Rabovik. 
+
+NSStringFromAnyObject can be extended with additional "any object handlers": see how the handlers for objects of MapKit, UIKit, CoreLocation are written: they are decoupled from main C/Objective-C "any objects handler" so they can be included manually if these frameworks are needed. Browse the code to see how to write custom handlers.
+
+Feedback is highly appreciated!
+
 ## Example
 
 ```objective-c
