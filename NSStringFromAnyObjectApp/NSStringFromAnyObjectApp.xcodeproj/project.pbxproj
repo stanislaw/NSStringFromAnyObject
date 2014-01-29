@@ -22,6 +22,8 @@
 		86891E2E18998046004A4558 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86891DF818997FD5004A4558 /* Foundation.framework */; };
 		86891E3118998046004A4558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86891E3018998046004A4558 /* main.m */; };
 		86891E3518998046004A4558 /* NSStringFromAnyObjectCommandLineApp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 86891E3418998046004A4558 /* NSStringFromAnyObjectCommandLineApp.1 */; };
+		86891E4D1899A7A8004A4558 /* NSStringFromAnyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */; };
+		86891E4E1899A87A004A4558 /* NSStringFromAnyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 		86891E491899A283004A4558 /* MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapKit.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/MapKit.h; sourceTree = "<group>"; };
 		86891E4A1899A2F9004A4558 /* UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIKit.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/UIKit.h; sourceTree = "<group>"; };
 		86891E4B1899A331004A4558 /* CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocation.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/CoreLocation.h; sourceTree = "<group>"; };
+		86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringFromAnyObject.m; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/NSStringFromAnyObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,10 +185,11 @@
 		86891E2718997FE4004A4558 /* NSStringFromAnyObject */ = {
 			isa = PBXGroup;
 			children = (
-				86891E2818997FE4004A4558 /* NSStringFromAnyObject.h */,
 				86891E491899A283004A4558 /* MapKit.h */,
 				86891E4A1899A2F9004A4558 /* UIKit.h */,
 				86891E4B1899A331004A4558 /* CoreLocation.h */,
+				86891E2818997FE4004A4558 /* NSStringFromAnyObject.h */,
+				86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */,
 			);
 			name = NSStringFromAnyObject;
 			path = ../NSStringFromAnyObject;
@@ -324,6 +328,7 @@
 			files = (
 				86891E0918997FD5004A4558 /* AppDelegate.m in Sources */,
 				86891E0518997FD5004A4558 /* main.m in Sources */,
+				86891E4D1899A7A8004A4558 /* NSStringFromAnyObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86891E3118998046004A4558 /* main.m in Sources */,
+				86891E4E1899A87A004A4558 /* NSStringFromAnyObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

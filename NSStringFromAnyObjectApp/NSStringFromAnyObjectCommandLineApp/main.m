@@ -10,6 +10,8 @@
 
 #import "NSStringFromAnyObject.h"
 
+#import "UIKit.h"
+#import "CoreLocation.h"
 
 int main(int argc, const char * argv[])
 {
@@ -85,9 +87,6 @@ int main(int argc, const char * argv[])
         anyObjectInspection = NSStringFromAnyObject( conststr );
         NSLog(@"const char *: %@", anyObjectInspection);
         
-        //    anyObjectInspection = NSStringFromAnyObject( "string123456" );
-        //    NSLog(@"string123456 *: %@", anyObjectInspection);
-
 
         // UIKit
 
@@ -101,7 +100,6 @@ int main(int argc, const char * argv[])
         NSLog(@"%@", anyObjectInspection);
 
         // CoreLocation
-        
     }
 
     return 0;

@@ -1,9 +1,9 @@
 
 
-#import <MapKit/MKGeometry.h>
+#import "NSStringFromAnyObject.h"
+
 
 static inline NSString *__NSStringFromMapKitObject(const char *type, const void *object) {
-
 
 #ifdef MK_EXTERN
 
@@ -29,22 +29,12 @@ static inline NSString *__NSStringFromMapKitObject(const char *type, const void 
 
 #endif
 
-#pragma mark CoreLocation
-
-#ifdef CL_EXTERN
-
-    if (strcmp(@encode(CLLocationCoordinate2D), type) == 0) {
-        CLLocationCoordinate2D coordinate = *(CLLocationCoordinate2D *)object;
-        return [NSString stringWithFormat:@"(CLLocationCoordinate2D){%f, %f}", coordinate.latitude, coordinate.longitude];
-    }
-    
-#endif
-    
-    
-    // Here finite strings, structs, ...
-    
-    
-    
-    return [NSString stringWithFormat:@"NSStringFromAnyObject: unsupported type: (%s)", type];
+    return nil;
 }
+
+
+static inline void __attribute__((constructor)) __NSStringFromMapKitObjectRegistration() {
+    __NSStringFromAnyObjectAdd(__NSStringFromMapKitObject);
+}
+
 

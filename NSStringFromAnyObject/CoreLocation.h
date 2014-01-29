@@ -1,6 +1,7 @@
 
 
-#pragma mark CoreLocation
+#import "NSStringFromAnyObject.h"
+
 
 static inline NSString *__NSStringFromCoreLocationObject(const char *type, const void *object) {
 
@@ -14,5 +15,10 @@ static inline NSString *__NSStringFromCoreLocationObject(const char *type, const
 #endif
 
     return nil;
+}
+
+
+static inline void __attribute__((constructor)) __NSStringFromCoreLocationObjectRegistration() {
+    __NSStringFromAnyObjectAdd(__NSStringFromCoreLocationObject);
 }
 

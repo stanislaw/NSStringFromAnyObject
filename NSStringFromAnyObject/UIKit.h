@@ -1,5 +1,6 @@
 
-#import <UIKit/UIKit.h>
+
+#import "NSStringFromAnyObject.h"
 
 
 static inline NSString *__NSStringFromUIKitObject(const char *type, const void *object) {
@@ -26,4 +27,10 @@ static inline NSString *__NSStringFromUIKitObject(const char *type, const void *
     return nil;
 
 }
+
+
+static inline void __attribute__((constructor)) __NSStringFromUIKitObjectRegistration() {
+    __NSStringFromAnyObjectAdd(__NSStringFromUIKitObject);
+}
+
 
