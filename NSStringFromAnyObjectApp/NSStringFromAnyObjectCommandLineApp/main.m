@@ -15,7 +15,6 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        
         NSString *anyObjectInspection;
 
         anyObjectInspection = NSStringFromAnyObject( nil );
@@ -88,8 +87,23 @@ int main(int argc, const char * argv[])
         
         //    anyObjectInspection = NSStringFromAnyObject( "string123456" );
         //    NSLog(@"string123456 *: %@", anyObjectInspection);
+
+
+        // UIKit
+
+        anyObjectInspection = NSStringFromAnyObject( CGRectMake(0, 0, 200, 200) );
+        NSLog(@"%@", anyObjectInspection);
+
+        anyObjectInspection = NSStringFromAnyObject( CGPointMake(0, 0) );
+        NSLog(@"%@", anyObjectInspection);
+
+        anyObjectInspection = NSStringFromAnyObject( CGSizeMake(0, 0) );
+        NSLog(@"%@", anyObjectInspection);
+
+        // CoreLocation
+        
     }
-    
+
     return 0;
 }
 
