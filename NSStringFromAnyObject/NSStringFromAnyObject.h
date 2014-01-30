@@ -54,7 +54,7 @@
 #import <Foundation/Foundation.h>
 
 
-void __NSStringFromAnyObjectAdd(NSString *(*pointer)(const char *type, const void *object));
+void __NSStringFromAnyObjectAddHandler(NSString *(*pointer)(const char *type, const void *object));
 NSString *__NSStringFromAnyObject(const char *type, const void *object);
 
 

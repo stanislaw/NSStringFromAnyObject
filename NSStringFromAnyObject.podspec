@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = 'NSStringFromAnyObject/*.{h,m}'
-  # s.exclude_files = 'Classes/Exclude'
+  s.private_header_files = 'NSStringFromAnyObject/Foundation.h', 'NSStringFromAnyObject/C.h', 'NSStringFromAnyObject/ObjC.h'
 
   # s.public_header_files = 'Classes/**/*.h'
 

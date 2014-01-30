@@ -30,7 +30,7 @@ static inline NSString *__NSStringFromUIKitObject(const char *type, const void *
 
 
 static inline void __attribute__((constructor)) __NSStringFromUIKitObjectRegistration() {
-    __NSStringFromAnyObjectAdd(__NSStringFromUIKitObject);
+    __NSStringFromAnyObjectAddHandler(__NSStringFromUIKitObject);
 }
 
 

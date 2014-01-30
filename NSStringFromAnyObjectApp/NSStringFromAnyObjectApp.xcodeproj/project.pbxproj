@@ -75,6 +75,9 @@
 		86891E4A1899A2F9004A4558 /* UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIKit.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/UIKit.h; sourceTree = "<group>"; };
 		86891E4B1899A331004A4558 /* CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocation.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/CoreLocation.h; sourceTree = "<group>"; };
 		86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringFromAnyObject.m; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/NSStringFromAnyObject.m; sourceTree = "<group>"; };
+		86891E4F189A1CE4004A4558 /* ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/ObjC.h; sourceTree = "<group>"; };
+		86891E50189A1E68004A4558 /* C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/C.h; sourceTree = "<group>"; };
+		86891E51189A1E7D004A4558 /* Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Foundation.h; path = ../../../../../stanislaw/Work/Pods/NSStringFromAnyObject/NSStringFromAnyObject/Foundation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,9 @@
 				86891E4B1899A331004A4558 /* CoreLocation.h */,
 				86891E2818997FE4004A4558 /* NSStringFromAnyObject.h */,
 				86891E4C1899A7A8004A4558 /* NSStringFromAnyObject.m */,
+				86891E4F189A1CE4004A4558 /* ObjC.h */,
+				86891E50189A1E68004A4558 /* C.h */,
+				86891E51189A1E7D004A4558 /* Foundation.h */,
 			);
 			name = NSStringFromAnyObject;
 			path = ../NSStringFromAnyObject;
