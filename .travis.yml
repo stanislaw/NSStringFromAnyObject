@@ -1,0 +1,11 @@
+language: objective-c
+
+before_install:
+- sw_vers
+- cd NSStringFromAnyObjectApp
+
+install: make install
+
+script: make ci
+
+
