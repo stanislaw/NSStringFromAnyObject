@@ -1,6 +1,6 @@
 # NSStringFromAnyObject
 
-NSStringFromAnyObject creation is caused by evolution of [EchoLogger project](https://github.com/stanislaw/EchoLogger) which used to provide the same functionality: `NSString representations for arbitrary objects (be it Objective-C or C objects)` by means of `Clang`'s `__attribute__((overloadable))`.  
+NSStringFromAnyObject creation was caused by evolution of [EchoLogger project](https://github.com/stanislaw/EchoLogger) which used to provide the same functionality: `NSString representations for arbitrary objects (be it Objective-C or C objects)` by means of Clang's `__attribute__((overloadable))`.  
 
 NSStringFromAnyObject uses Objective-C Runtime introspection instead, as it appears to be a more consistent approach (though probably a bit slower). It is inspired by [ATLog project](https://github.com/rabovik/ATLog) written by Yan Rabovik. 
 
@@ -16,7 +16,7 @@ The following types are currently supported:
   * `void *` and `const void *` pointers.
   * Numeric types: `BOOL`, `double`, `float`, `int`, `long` and others.
   * C strings: `char *` and `const char *`.
-  * Typical `structs` like two floats of four doubles (MKMapSize, MKMapRect and similar).
+  * Typical `structs` like struct of two floats or four doubles (MKMapSize, MKMapRect and similar).
 * UIKit types: `CGRect`, `CGSize`, `CGPoint`.
 
 NSStringFromAnyObject can be extended with additional "any object handlers": see how the handlers for objects of UIKit are written: they are decoupled from main C/Objective-C "any objects handler" so they can be included manually if these frameworks are needed. Browse the code to see how to write custom handlers.
@@ -160,7 +160,7 @@ Program ended with exit code: 0
 
 ## Unsupported types
 
-Because of its hackery based on `void *` NSStringFromAnyObject does not work for the following types of data:
+Because of a hackery based on `void *` NSStringFromAnyObject does not work for the following types of data:
 
 * String literals
 
@@ -193,7 +193,7 @@ NSLog(@"%@", NSStringFromAnyObject(nums));
 NSStringFromAnyObject: unsupported type: (^i)
 ```
 
-All other common types of objects are known to be supported.
+All other typical types of objects are known to be supported.
 
 
 ## Copyright
