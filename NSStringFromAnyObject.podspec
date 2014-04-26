@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NSStringFromAnyObject"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "NSString representations for arbitrary C/Objective-C objects."
   s.homepage     = "https://github.com/stanislaw/NSStringFromAnyObject"
   s.license      = { :type => 'MIT' }
