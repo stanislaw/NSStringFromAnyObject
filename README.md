@@ -180,7 +180,6 @@ NSStringFromAnyObject: unsupported type: (^i)
 
 All other common types of objects are known to be supported.
 
-----
 
 ## Copyright
 
