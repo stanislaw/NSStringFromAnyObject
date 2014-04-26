@@ -8,6 +8,8 @@ NSStringFromAnyObject can be extended with additional "any object handlers": see
 
 Feedback is highly appreciated!
 
+[![Build Status](https://travis-ci.org/stanislaw/NSStringFromAnyObject.svg?branch=master)](https://travis-ci.org/stanislaw/NSStringFromAnyObject) 
+
 ## Example
 
 ```objective-c
