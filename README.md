@@ -6,12 +6,16 @@ NSStringFromAnyObject uses Objective-C Runtime introspection instead, as it appe
 
 The following types are currently supported:
 
-* Objective-C types: object `id` aka `%@`, class `Class`, selector `SEL`.
-* Foundation: NSRange.
+* Objective-C types 
+  * Object `id` aka `%@`
+  * Class `Class`
+  * Selector `SEL`
+* Foundation
+  * `NSRange`
 * C types 
   * `void *` and `const void *` pointers.
   * Numeric types: `BOOL`, `double`, `float`, `int`, `long` and others.
-  * C strings: char * and const char *.
+  * C strings: `char *` and `const char *`.
   * Typical `structs` like two floats of four doubles (MKMapSize, MKMapRect and similar).
 * UIKit types: `CGRect`, `CGSize`, `CGPoint`.
 
