@@ -141,3 +141,47 @@ YES
 Program ended with exit code: 0
 ```
 
+## Unsupported types
+
+Because of its hackery based on `void *` NSStringFromAnyObject does not work for the following types of data:
+
+* String literals
+
+```objective-c
+char str1[] = "12345";
+char str2[6] = "12345";
+
+NSLog(@"%@", NSStringFromAnyObject(str1));
+NSLog(@"%@", NSStringFromAnyObject(str2));
+
+=>
+
+NSStringFromAnyObject: unsupported type: ([6c])
+NSStringFromAnyObject: unsupported type: ([6c])
+```
+
+* C arrays (excluding C strings)
+
+```objective-c
+int *nums = malloc(3 * sizeof(int));
+
+nums[0] = 1;
+nums[1] = 2;
+nums[2] = 3;
+
+NSLog(@"%@", NSStringFromAnyObject(nums));
+
+=>
+
+NSStringFromAnyObject: unsupported type: (^i)
+```
+
+All other common types of objects are known to be supported.
+
+----
+
+## Copyright
+
+Copyright (c) 2014 Stanislaw Pankevich. See LICENSE for details.
+
+
