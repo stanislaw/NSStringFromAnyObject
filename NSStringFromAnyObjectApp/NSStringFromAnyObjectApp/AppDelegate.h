@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  NSStringFromAnyObjectApp
 //
-//  Created by Stanislaw Pankevich on 29/01/14.
+//  Created by Stanislaw Pankevich on 26/04/14.
 //  Copyright (c) 2014 Stanislaw Pankevich. All rights reserved.
 //
 

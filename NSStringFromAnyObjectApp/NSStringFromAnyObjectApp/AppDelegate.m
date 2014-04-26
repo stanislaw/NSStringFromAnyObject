@@ -2,15 +2,11 @@
 //  AppDelegate.m
 //  NSStringFromAnyObjectApp
 //
-//  Created by Stanislaw Pankevich on 29/01/14.
+//  Created by Stanislaw Pankevich on 26/04/14.
 //  Copyright (c) 2014 Stanislaw Pankevich. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-
-#import "NSStringFromAnyObject.h"
-
 
 @implementation AppDelegate
 
@@ -20,18 +16,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
-
-    [self seeNSStringFromAnyObjectInAction];
-
     return YES;
 }
-
-
-- (void)seeNSStringFromAnyObjectInAction {
-
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

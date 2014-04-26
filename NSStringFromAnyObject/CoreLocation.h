@@ -19,6 +19,6 @@ static inline NSString *__NSStringFromCoreLocationObject(const char *type, const
 
 
 static inline void __attribute__((constructor)) __NSStringFromCoreLocationObjectRegistration() {
-    __NSStringFromAnyObjectAdd(__NSStringFromCoreLocationObject);
+    __NSStringFromAnyObjectAddHandler(__NSStringFromCoreLocationObject);
 }
 

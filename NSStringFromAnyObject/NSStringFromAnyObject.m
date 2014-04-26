@@ -36,7 +36,7 @@ static inline void __attribute__((constructor)) __NSStringFromAnyObjectRegisterD
 
 NSString *__NSStringFromAnyObject(const char *type, const void *object) {
 
-
+    
     for (int i = 0; i < NSStringFromAnyObjectHandlersMax; i++) {
         NSStringFromAnyObjectHandler handler = NSStringFromAnyObjectHandlers[i];
 
