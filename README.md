@@ -4,7 +4,18 @@ NSStringFromAnyObject creation is caused by evolution of [EchoLogger project](ht
 
 NSStringFromAnyObject uses Objective-C Runtime introspection instead, as it appears to be a more consistent approach (though probably a bit slower). It is inspired by [ATLog project](https://github.com/rabovik/ATLog) written by Yan Rabovik. 
 
-NSStringFromAnyObject can be extended with additional "any object handlers": see how the handlers for objects of MapKit, UIKit, CoreLocation are written: they are decoupled from main C/Objective-C "any objects handler" so they can be included manually if these frameworks are needed. Browse the code to see how to write custom handlers.
+The following types are currently supported:
+
+* Objective-C types: object `id` aka `%@`, class `Class`, selector `SEL`.
+* Foundation: NSRange.
+* C types 
+  * `void *` and `const void *` pointers.
+  * Numeric types: `BOOL`, `double`, `float`, `int`, `long` and others.
+  * C strings: char * and const char *.
+  * Typical `structs` like two floats of four doubles (MKMapSize, MKMapRect and similar).
+* UIKit types: `CGRect`, `CGSize`, `CGPoint`.
+
+NSStringFromAnyObject can be extended with additional "any object handlers": see how the handlers for objects of UIKit are written: they are decoupled from main C/Objective-C "any objects handler" so they can be included manually if these frameworks are needed. Browse the code to see how to write custom handlers.
 
 Feedback is highly appreciated!
 
