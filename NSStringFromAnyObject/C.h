@@ -111,33 +111,33 @@ static inline NSString *__NSStringFromCObject(const char *type, const void *obje
 
 
     if (strcmp("{?=dd}", type) == 0) {
-        double firstMember = *((double *)(object));
-        double secondMember = *((double *)(object) + 1);
+        double firstMember  = ((double *)object)[0];
+        double secondMember = ((double *)object)[1];
 
         return [NSString stringWithFormat:@"(struct){%f, %f}", firstMember, secondMember];
     }
 
     if (strcmp("{?={?=dd}{?=dd}}", type) == 0) {
-        double firstMember  = *((double *)(object));
-        double secondMember = *((double *)(object) + 1);
-        double thirdMember  = *((double *)(object) + 2);
-        double fourthMember = *((double *)(object) + 3);
+        double firstMember  = ((double *)object)[0];
+        double secondMember = ((double *)object)[1];
+        double thirdMember  = ((double *)object)[2];
+        double fourthMember = ((double *)object)[3];
 
         return [NSString stringWithFormat:@"(struct){%f, %f, %f, %f}", firstMember, secondMember, thirdMember, fourthMember];
     }
 
     if (strcmp("{?=ff}", type) == 0) {
-        float firstMember = *((float *)(object));
-        float secondMember = *((float *)(object) + 1);
+        float firstMember  = ((float *)object)[0];
+        float secondMember = ((float *)object)[1];
 
         return [NSString stringWithFormat:@"(struct){%ff, %ff}", firstMember, secondMember];
     }
 
     if (strcmp("{?={?=ff}{?=ff}}", type) == 0) {
-        float firstMember  = *((float *)(object));
-        float secondMember = *((float *)(object) + 1);
-        float thirdMember  = *((float *)(object) + 2);
-        float fourthMember = *((float *)(object) + 3);
+        float firstMember  = ((float *)object)[0];
+        float secondMember = ((float *)object)[1];
+        float thirdMember  = ((float *)object)[2];
+        float fourthMember = ((float *)object)[3];
 
         return [NSString stringWithFormat:@"(struct){%ff, %ff, %ff, %ff}", firstMember, secondMember, thirdMember, fourthMember];
     }

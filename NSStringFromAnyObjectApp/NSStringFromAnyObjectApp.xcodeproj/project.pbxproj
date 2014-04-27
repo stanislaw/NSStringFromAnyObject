@@ -51,7 +51,6 @@
 		86CD5183190BDD000091445E /* NSStringFromAnyObjectAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSStringFromAnyObjectAppTests-Info.plist"; sourceTree = "<group>"; };
 		86CD5185190BDD000091445E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86CD5192190BDE1F0091445E /* C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C.h; sourceTree = "<group>"; };
-		86CD5193190BDE1F0091445E /* CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocation.h; sourceTree = "<group>"; };
 		86CD5194190BDE1F0091445E /* Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foundation.h; sourceTree = "<group>"; };
 		86CD5195190BDE1F0091445E /* NSStringFromAnyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringFromAnyObject.h; sourceTree = "<group>"; };
 		86CD5196190BDE1F0091445E /* NSStringFromAnyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFromAnyObject.m; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				86CD5192190BDE1F0091445E /* C.h */,
-				86CD5193190BDE1F0091445E /* CoreLocation.h */,
 				86CD5194190BDE1F0091445E /* Foundation.h */,
 				86CD5195190BDE1F0091445E /* NSStringFromAnyObject.h */,
 				86CD5196190BDE1F0091445E /* NSStringFromAnyObject.m */,
