@@ -181,7 +181,7 @@
 
 
     objectRepresentation = NSStringFromAnyObject( "String literal" );
-    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: ([15c])"]);
+    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: [15c]"]);
 
 
     typedef struct {
@@ -191,12 +191,12 @@
 
     NSSomeStructType someStructTypeVariable;
     objectRepresentation = NSStringFromAnyObject( someStructTypeVariable );
-    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: ({?=ii})"]);
+    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: {?=ii}"]);
 
 
     int *b = malloc(3 * sizeof(int));
     objectRepresentation = NSStringFromAnyObject( b );
-    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: (^i)"]);
+    XCTAssertTrue([objectRepresentation isEqualToString:@"NSStringFromAnyObject: unsupported type: ^i"]);
     free(b);
 }
 

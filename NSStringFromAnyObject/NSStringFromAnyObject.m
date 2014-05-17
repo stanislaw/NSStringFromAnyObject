@@ -50,6 +50,6 @@ NSString *__NSStringFromAnyObject(const char *type, const void *object) {
     }
 
 
-    return [NSString stringWithFormat:@"NSStringFromAnyObject: unsupported type: (%s)", type];
+    return [NSString stringWithFormat:@"NSStringFromAnyObject: unsupported type: %s", type];
 }
 

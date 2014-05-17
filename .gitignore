@@ -2,6 +2,7 @@
 .DS_Store
 
 NSStringFromAnyObjectApp/Build/
+NSStringFromAnyObjectApp/NSStringFromAnyObjectApp.xcodeproj/project.xcworkspace/xcuserdata/**/*
 
 # NSStringFromAnyObjectApp/Pods/
 # NSStringFromAnyObjectApp/Podfile.lock
