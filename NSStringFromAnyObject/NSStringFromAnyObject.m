@@ -12,7 +12,16 @@ typedef NSString * (* NSStringFromAnyObjectHandler)(const char *type, const void
 
 
 static const int NSStringFromAnyObjectHandlersMax = 8;
-static NSStringFromAnyObjectHandler NSStringFromAnyObjectHandlers[NSStringFromAnyObjectHandlersMax] = { NULL };
+static NSStringFromAnyObjectHandler NSStringFromAnyObjectHandlers[NSStringFromAnyObjectHandlersMax] = {
+    __NSStringFromObjCObject,
+    __NSStringFromCObject,
+    __NSStringFromFoundationObject,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL
+};
 
 
 void __NSStringFromAnyObjectAddHandler(NSStringFromAnyObjectHandler handler) {
@@ -24,13 +33,6 @@ void __NSStringFromAnyObjectAddHandler(NSStringFromAnyObjectHandler handler) {
     }
 
     assert("__NSStringFromAnyObjectAdd: limit of handlers is reached");
-}
-
-
-static inline void __attribute__((constructor)) __NSStringFromAnyObjectRegisterDefaultHandlers() {
-    __NSStringFromAnyObjectAddHandler(__NSStringFromObjCObject);
-    __NSStringFromAnyObjectAddHandler(__NSStringFromCObject);
-    __NSStringFromAnyObjectAddHandler(__NSStringFromFoundationObject);
 }
 
 
